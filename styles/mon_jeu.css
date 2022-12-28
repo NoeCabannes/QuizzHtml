@@ -1,0 +1,131 @@
+/* pour la page */
+body {
+  text-align: center; /* Alignement du text eau centre */
+  font-family: 'Lato'; /* Police de caractère Lato */
+  cursor: url('images/cursor2blue.png'), auto;	 /* Curseur de souris personnalisé */
+  margin: 0; /* Pas de bordure ni de marge */
+  padding-top: 50px;
+  background-color: #EEEEEE; /* Couleur de fond gris claire */
+}
+
+h2 {
+  text-align: center; /* ALignement au centre */
+  font-family: "Comic Sans MS", "Comic Sans", cursive; /* Police de caratère Comic Sans */
+
+}
+
+.question {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: larger; /* Taille de police plus grande */
+  font-weight: bold; /* Gras */
+
+
+}
+
+/* pour le résultat */
+#result {
+  font-size: larger;
+  font-weight: bold;
+  color: green;
+}
+
+/* pour l'alignement d formulaire et du résultat */
+form, #result {
+  justify-content: center;
+}
+
+/* CSS pour le bouton submit/Valider */
+.submit {
+	background: #31CD63; /* Couleur vert emmeraude */
+	border-radius: 8px; /* Bordure arrondie */
+	
+	font-style: normal; /* Normal */
+	font-weight: 900;
+	font-size: 16px; /* Taille de la police */
+	line-height: 20px;
+	/* identique à la heuteur de la boite ou 125% */
+
+
+	color: #F4F3F6;
+}
+
+/* pour la structure de la page */
+#quiz-question {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* pour la msie en forme du header/en tête */
+header {
+  position: fixed; /* fixer en haut de l'écran lors du défillement */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* aligner les éléments à gauche et à droite */
+  padding: 0 20px;
+  box-sizing: border-box; /* inclure la padding dans les dimensions de l'élément */
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* ajouter une ombre projetée */
+  z-index: 1; /* mettre le header au dessus des autres éléments */
+  transition: all 0.5s ease;
+}
+
+header img {
+  height: 50px;
+  transition: all 0.5s ease;
+}
+
+/* pour chnager le style lorque l'utilisateur défile */
+header.scrolled {
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+header.scrolled img {
+  height: 40px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+article p {
+  text-align: center;
+  font-size: 19px;
+}
+
+.left-column {
+  width: 50%; /* Donne une largeur de 50% à la colonne de gauche */
+}
+
+.right-column {
+  width: 50%; /* Donne une largeur de 50% à la colonne de droite */
+  padding: 0 20px; /* padding de 20px sur la droite */
+}
+
+/* Retire le margin-top pour les titres h1 dans la colonne de droite */
+.right-column h1 {
+  margin-top: 0;
+}
+
+/* Style l'affichage du timer */
+#timer {
+  display: inline-block; /* Afficher le timer e bloc inline */
+  margin-left: 10px; /* margin-left de 10px */
+  font-size: 18px; /*  taille de police de 18px */
+  font-weight: bold;
+}
+
+/* Chnage la couleur du timer en rouge lorqu'il y a la classe red  */
+#timer.red {
+  color: red;
+}
+
+

@@ -1,0 +1,174 @@
+<!-- La déclaration DOCTYPE indique au navigateur quelle version de HTML est utilisée -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+  <!-- Lien vers les feuilles de style et les polices -->
+  <link rel="stylesheet" type="text/css" href="styles/mon_jeu.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <style> @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); </style>
+</head>
+<body>
+  <!-- en tête en haut de page -->
+  <header>
+    <!-- logo du quiz fait maison -->
+    <img src="images/quizzlogo.png" alt="Quiz logo" id="logo" class="logo">
+	<!-- icone du timer en svg -->
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="25px" width="25px" version="1.1" viewBox="0 0 296.228 296.228" enable-background="new 0 0 296.228 296.228">
+	  <g>
+		<path d="m167.364,48.003v-23.003h10.5c6.903,0 12.5-5.597 12.5-12.5s-5.596-12.5-12.5-12.5h-59.5c-6.903,0-12.5,5.597-12.5,12.5s5.597,12.5 12.5,12.5h10.5v23.003c-59.738,9.285-105.604,61.071-105.604,123.37-3.55271e-15,68.845 56.01,124.854 124.854,124.854s124.854-56.01 124.854-124.854c0-62.299-45.866-114.085-105.604-123.37zm-19.25,223.225c-55.06,0-99.854-44.795-99.854-99.854s44.795-99.854 99.854-99.854 99.854,44.795 99.854,99.854-44.794,99.854-99.854,99.854z"/>
+		<path d="m160.614,166.18v-58.889c0-6.903-5.597-12.5-12.5-12.5s-12.5,5.597-12.5,12.5v66.1c0,2.033 0.81,3.982 2.25,5.416l34.969,34.822c4.893,4.872 12.806,4.854 17.678-0.037 4.871-4.892 4.854-12.807-0.037-17.678l-29.86-29.734z"/>
+	  </g>
+	</svg>
+	<div id="timer" >100</div>
+	</div>
+  </header>
+  <form id="quiz-form">
+  <br>
+  <article>
+    <h2>Apprendre en s'amusant</h2>
+    <p>Le quiz propose de nombreuses activités : questions à choix multiples, texte à trous, enregistements audio, reconnaisance d'image etc. dans l'optique de facilité la différenciation pédagocique et accompagner l'enfant dans sa démarche d'apprentissage.</p>
+	<h2>Conforme aux programmes</h2>
+	<p>Le quizz comporte des questions de plusieurs catégories, au programme de l'éduction nationale du CP au CE1.</p>
+	<h2>But du jeu :</h2>
+	<p>Donnez le plus de bonnes réponses le plus vite possible pour faire défi 100 secondes. Actualiser pour commencer ou recommencer à tout moment.
+  </article>
+  <hr>
+
+
+  <p> 
+    <p class="question" >1. Quel est le numéro de la police ?</p>
+    <label><input type="radio" name="answer1" value="Le 17">Le 17</label><br>
+    <label><input type="radio" name="answer1" value="Le 18">Le 18</label><br>
+    <label><input type="radio" name="answer1" value="Le 112">Le 112</label><br>
+    <p class="question">2. Quelle est la capitale du Brésil ?</p>
+    <label><input type="radio" name="answer2" value="Rio de Janeiro">Rio de Janeiro</label><br>
+    <label><input type="radio" name="answer2" value="Brasilia">Brasilia</label><br>
+    <label><input type="radio" name="answer2" value="Sao Paulo">Sao Paulo</label><br>
+    <p class="question">3. Combien il y a t-il de lettres dans l'alphabet ?</p>
+	<input type="number" name="answer3" id="answer3" />
+    <p class="question">4. Qui a été le premier homme à aller sur la lune ?</p>
+	<img src="images/apollo-11.jpg" alt="Apollo 11"><br>
+    <label><input type="radio" name="answer4" value="Buzz Aldrin">Buzz Aldrin</label><br>
+    <label><input type="radio" name="answer4" value="Louis Armstrong">Louis Armstrong</label><br>
+    <label><input type="radio" name="answer4" value="Neil Armstrong">Neil Armstrong</label><br>
+	<p class="question">5. A quel pays correspond ce drapeau ?</p>
+	<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 3 2">
+	<rect width="3" height="2" fill="#009246"/>
+	<rect width="2" height="2" x="1" fill="#fff"/>
+	<rect width="1" height="2" x="2" fill="#ce2b37"/>
+	</svg>
+	<br>
+	<label><input type="radio" name="answer5" value="Mexique">Mexique</label><br>
+    <label><input type="radio" name="answer5" value="Italie">Italie</label><br>
+    <label><input type="radio" name="answer5" value="Irlande">Irlande</label><br>
+	<p class="question">6. Qui est l'auteur de cette peinture ?</p>
+	<img src="images/mona-lisa.jpg" alt="Apollo 11"><br>
+	<label><input type="radio" name="answer6" value="Léonard de Vinci">Léonard de Vinci</label><br>
+    <label><input type="radio" name="answer6" value="Pablo Picasso">Pablo Picasso</label><br>
+    <label><input type="radio" name="answer6" value="Claude Monet">Claude Monet</label><br>
+	<br>
+	<div class="question">
+		<label for="answer7">7. Qui est le président de la République frçanise actuel ?</label><br><br>
+		<input type="text" name="answer7" id="answer7" />
+	</div>
+	<div>
+		<p class="question">8. Quels coupes du monde de football la France a t-elle gagnée ?</p>
+		<label><input type="checkbox" name="answer81" value="1998" />1998</label><br>
+		<label><input type="checkbox" name="answer82" value="2006" />2006</label><br>
+		<label><input type="checkbox" name="answer83" value="2014" />2014</label><br>
+		<label><input type="checkbox" name="answer84" value="2018" />2018</label><br>
+		<label><input type="checkbox" name="answer85" value="2022" />2022</label><br>
+	</div>
+	<br>
+	<div class="question">
+		<label for="answer9">9. Quand la prise de la Bastille a eu lieu ?</label><br><br>
+		<input type="date" name="answer9" id="answer9" />
+	</div><br>
+	<label class="question" for="answer10">10. Choissez les terminaisons correctes du verbe comprendre au présent de l'infinitif:</label>
+	<br>
+	<br>
+	<label>je compren</label>
+	<select name="premiereSingulier">
+    <option value="empty" selected>(vide)</option>
+    <option value="d" >d</option>
+    <option value="ds">ds</option>
+	<option value="ons">ons</option>
+	<option value="ez">ez</option>
+	<option value="nent">nent</option>
+	<option value="nnent">nnent</option>
+	</select>
+	<br>
+	<label>tu compren</label>
+	<select name="deuxiemeSingulier">
+    <option value="empty" selected>(vide)</option>
+    <option value="d" >d</option>
+    <option value="ds">ds</option>
+	<option value="ons">ons</option>
+	<option value="ez">ez</option>
+	<option value="nent">nent</option>
+	<option value="nnent">nnent</option>
+	</select>
+	<br>
+	<label>il/elle/on compren</label>
+	<select name="troisiemeSingulier">
+    <option value="empty" selected>(vide)</option>
+    <option value="d" >d</option>
+    <option value="ds">ds</option>
+	<option value="ons">ons</option>
+	<option value="ez">ez</option>
+	<option value="nent">nent</option>
+	<option value="nnent">nnent</option>
+	</select>
+	<br>
+	<label>nous compren</label>
+	<select name="premierePluriel">
+    <option value="empty" selected>(vide)</option>
+    <option value="d" >d</option>
+    <option value="ds">ds</option>
+	<option value="ons">ons</option>
+	<option value="ez">ez</option>
+	<option value="nent">nent</option>
+	<option value="nnent">nnent</option>
+	</select>
+	<br>
+	<label>vous compren</label>
+	<select name="deuxiemePluriel">
+    <option value="empty" selected>(vide)</option>
+    <option value="d" >d</option>
+    <option value="ds">ds</option>
+	<option value="ons">ons</option>
+	<option value="ez">ez</option>
+	<option value="nent">nent</option>
+	<option value="nnent">nnent</option>
+	</select>
+	<br>
+	<label>ils/elles compren</label>
+	<select name="troisiemePluriel">
+    <option value="empty" selected>(vide)</option>
+    <option value="d" >d</option>
+    <option value="ds">ds</option>
+	<option value="ons">ons</option>
+	<option value="ez">ez</option>
+	<option value="nent">nent</option>
+	<option value="nnent">nnent</option>
+	</select><br>
+	<br>
+    <button class="submit" type="submit">Valider</button>
+  </form>
+  <br>
+  <div id="result"></div>
+  <footer>
+  <hr>
+  <p>Fait par Noé Cabannes-Michel, Pierrick Breson et Nicolas Breton</p>
+  <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !">
+    </a>
+  </footer>
+  <!-- On préfère ici mettre le script à la fin du fichier HTML just avant de fermer le tag </body>.
+  En effet, cela permet d'optimiser la performance/temps de chargement de la page car le script
+  ne va pas s'executer avant que tout le reste de la page le soit. -->
+  <script src="scripts/mon_jeu.js"></script>
+</body>
+</html>
